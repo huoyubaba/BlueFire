@@ -1,9 +1,9 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
-From: Chuck <fanck0605@qq.com>
-Date: Mon, 13 Jul 2020 13:09:02 +0800
-Subject: [PATCH] tools: add ucl and upx compresss
+From: slitaz-cn <teasiu@163.com>
+Date: Tue, 6 Apr 2021 01:25:07 +0800
+Subject: [PATCH] add upx ucl for 19.07.7
 
-Signed-off-by: Chuck <fanck0605@qq.com>
+Signed-off-by: slitaz-cn <teasiu@163.com>
 ---
  tools/Makefile     |  3 ++-
  tools/ucl/Makefile | 51 ++++++++++++++++++++++++++++++++++++++++++++++
@@ -13,26 +13,26 @@ Signed-off-by: Chuck <fanck0605@qq.com>
  create mode 100644 tools/upx/Makefile
 
 diff --git a/tools/Makefile b/tools/Makefile
-index a2665dbc9a..6dd93f3cfe 100644
+index b8d986b80c..bcde9a720d 100644
 --- a/tools/Makefile
 +++ b/tools/Makefile
-@@ -25,7 +25,7 @@ tools-y += autoconf autoconf-archive automake bc bison cmake dosfstools
- tools-y += e2fsprogs fakeroot findutils firmware-utils flex gengetopt
- tools-y += libressl libtool lzma m4 make-ext4fs missing-macros mkimage
- tools-y += mklibs mm-macros mtd-utils mtools padjffs2 patch-image
--tools-y += patchelf pkgconf quilt squashfskit4 sstrip zip zlib zstd
-+tools-y += patchelf pkgconf quilt squashfskit4 sstrip ucl upx zip zlib zstd
+@@ -33,7 +33,7 @@ tools-$(CONFIG_TARGET_mxs) += elftosb sdimage
+ tools-$(CONFIG_TARGET_ar71xx) += lzma-old
+ tools-$(CONFIG_TARGET_ar71xx)$(CONFIG_TARGET_ath79) += squashfs
+ tools-$(CONFIG_USES_MINOR) += kernel2minor
+-tools-y += lzma squashfskit4 zip
++tools-y += lzma squashfskit4 zip ucl upx
  tools-$(BUILD_B43_TOOLS) += b43-tools
  tools-$(BUILD_ISL) += isl
- tools-$(BUILD_TOOLCHAIN) += expat gmp libelf mpc mpfr
-@@ -71,6 +71,7 @@ $(curdir)/quilt/compile := $(curdir)/autoconf/compile $(curdir)/findutils/compil
- $(curdir)/sdcc/compile := $(curdir)/bison/compile
+ tools-$(CONFIG_USE_SPARSE) += sparse
+@@ -46,6 +46,7 @@ $(curdir)/flex/compile := $(curdir)/libtool/compile
+ $(curdir)/libtool/compile := $(curdir)/m4/compile $(curdir)/autoconf/compile $(curdir)/automake/compile $(curdir)/missing-macros/compile
  $(curdir)/squashfs/compile := $(curdir)/lzma-old/compile
  $(curdir)/squashfskit4/compile := $(curdir)/xz/compile $(curdir)/zlib/compile
 +$(curdir)/upx/compile := $(curdir)/ucl/compile
- $(curdir)/zlib/compile := $(curdir)/cmake/compile
- $(curdir)/zstd/compile := $(curdir)/cmake/compile
- 
+ $(curdir)/quilt/compile := $(curdir)/autoconf/compile $(curdir)/findutils/compile
+ $(curdir)/autoconf/compile := $(curdir)/m4/compile
+ $(curdir)/automake/compile := $(curdir)/m4/compile $(curdir)/autoconf/compile $(curdir)/pkg-config/compile $(curdir)/xz/compile
 diff --git a/tools/ucl/Makefile b/tools/ucl/Makefile
 new file mode 100644
 index 0000000000..9fb9aec117
@@ -132,5 +132,5 @@ index 0000000000..fbf1dfbd2e
 +
 +$(eval $(call HostBuild))
 -- 
-2.25.1
+2.20.1
 
