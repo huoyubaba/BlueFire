@@ -1,7 +1,7 @@
 ###########################################################
 #   Description: Compile OpenWrt by GitHub Actions        #
 #   Based on: https://github.com/P3TERX/Actions-OpenWrt   #
-#   Author: Hyy2001X                                      #
+#   Author: HuoyuBaba                                     #
 ###########################################################
 
 name: NEWIFI D2
@@ -23,8 +23,8 @@ on:
     branches: 
      - master
 
-  #schedule:
-  #  - cron: 0 8 * * 5
+  schedule:
+    - cron: 0 8 * * 5
 
   #watch:
   #  types: [started]
@@ -86,7 +86,6 @@ jobs:
         echo "REPO_BRANCH=$REPO_BRANCH" >> $GITHUB_ENV
         echo "Compile_Date=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
         echo "Display_Date=$(date +%Y/%m/%d)" >> $GITHUB_ENV
-
     - name: Initialization Environment
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -103,7 +102,6 @@ jobs:
             sudo -E apt-get -y autoremove --purge
             sudo -E apt-get clean
         fi
-
     - name: Clone Openwrt Source Code
       run: |
         git clone -b $REPO_BRANCH $REPO_URL openwrt
@@ -111,7 +109,6 @@ jobs:
         cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-
     - name: Run AutoBuild_DiyScript.sh
       run: |
         chmod +x Scripts/AutoBuild_*.sh
@@ -124,7 +121,6 @@ jobs:
         rm .config && cp $GITHUB_WORKSPACE/Configs/$CONFIG_FILE .config
         Firmware_Diy_Main
         Firmware_Diy
-
     - name: Compile
       run: |
         cd openwrt
@@ -135,14 +131,12 @@ jobs:
         make download -j$(nproc)
         make -j$(nproc) || make -j1 V=s
         [ $? == 0 ] && echo "Result=true" >> $GITHUB_ENV || echo "Result=false" >> $GITHUB_ENV
-
     - name: Process Firmware
       if: env.Result == 'true' && !cancelled()
       run: |
         cd openwrt
         source $GITHUB_WORKSPACE/Scripts/AutoBuild_Function.sh
         Firmware_Diy_End
-
     - name: Upload Firmware to Artifacts
       uses: actions/upload-artifact@main
       if: env.UPLOAD_ARTIFACTS == 'true' && env.Result == 'true' && !cancelled()
