@@ -11,8 +11,7 @@
 name: Build mortal
 
 on:
-
-  push:
+ push:
     branches: 
       - master
       
