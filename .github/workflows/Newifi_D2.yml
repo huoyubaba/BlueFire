@@ -18,7 +18,10 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-
+      Tempoary_IP:
+        description: '临时修改 IP 地址 [可选]'
+        default: ''
+        
 env:
   REPO_URL: https://github.com/Thanf-code/immortalwrt
   REPO_BRANCH: openwrt-21.02
