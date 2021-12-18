@@ -10,6 +10,14 @@
 
 name: Build mortal
 
+on:
+  push:
+    branches: 
+      - master
+      
+#  schedule:
+#    - cron: 0 8 */5 * *
+
 env:
   REPO_URL: https://github.com/Thanf-code/immortalwrt
   REPO_BRANCH: openwrt-21.02
@@ -23,14 +31,6 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-
-on:
-  push:
-    branches: 
-      - master
-      
-#  schedule:
-#    - cron: 0 8 */5 * *
 
 jobs:
   build:
