@@ -2,4 +2,4 @@
 
 Auto build OpenWrt firmware for Newifi D2 via GitHub Actions
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/huoyubaba/Autobuild-Newifi_D2?style=for-the-badge&label=Download)](https://github.com/huoyubaba/Autobuild-Newifi_D2/releases/latest)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/huoyubaba/BlueFire?style=for-the-badge&label=Download)](https://github.com/huoyubaba/BlueFire/releases/latest)
