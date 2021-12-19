@@ -22,7 +22,7 @@ on:
     types: [started]
 
 env:
-  REPO_URL: https://github.com/yjwskj/openwrt-19.07
+  REPO_URL: https://github.com/melsem/openwrt-19.07.7-spi
   REPO_BRANCH: master
   CONFIG_FILE: .config
   DIY_SH: diy.sh
