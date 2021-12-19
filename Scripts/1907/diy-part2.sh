@@ -12,3 +12,9 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/10.1.10.1/g' package/base-files/files/bin/config_generate
+
+# Add lede's Packages
+git clone --depth=1 https://github.com/Lienol/openwrt-package
+rm -rf ../lean/luci-app-kodexplorer
+
+https://github.com/coolsnowwolf/lede/tree/master/package
