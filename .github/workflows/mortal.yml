@@ -30,10 +30,7 @@ on:
     inputs:
       Tempoary_IP:
         description: '临时修改 IP 地址 [可选]'
-        default: ''
-      Tempoary_CONFIG:
-        description: '配置文件 [可选]'
-        default: ''
+        default: '10.1.10.1'
       ssh:
         description: 'SSH connection to Actions'
         required: false
