@@ -10,16 +10,21 @@
 
 name: 19.07-OpenWrt 固件
 
+#编辑任意指定文件触发开始编译(去掉下面5个#开启,最下面一行是指定修改什么文件就触发编译,我现在是修改diy.config文件触发)
 on:
   repository_dispatch:
-
-#编辑任意指定文件触发开始编译(去掉下面5个#开启,最下面一行是指定修改什么文件就触发编译,我现在是修改diy.config文件触发)
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - '1907.config'
-
+  workflow_dispatch:
+    inputs:
+      Tempoary_IP:
+        description: '临时修改 IP 地址 [可选]'
+        default: ''
+      Tempoary_CONFIG:
+        description: '配置文件 [可选]'
+        default: '2012.config'
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
 
 #release发布触发开始编译(只是一个触发条件,不会发布的,又麻烦,没卵用,不用研究)
 #  release:
