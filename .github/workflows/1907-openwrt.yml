@@ -1,12 +1,9 @@
-#
-#
-# 感谢p3terx大神的一键编译脚本
-# 
-# Copyright (C) 2019 P3TERX <https://p3terx.com>
-# <https://github.com/P3TERX/Actions-OpenWrt.git>
-#
-#修改以下代码或者开启触发开关都好，要严格按格式对好,前面有多少空格也要看清楚
-#
+   
+###########################################################
+#   Description: Compile OpenWrt by GitHub Actions        #
+#   Based on: https://github.com/P3TERX/Actions-OpenWrt   #
+#   Author: Hyy2001X                                      #
+###########################################################
 
 name: 19.07-OpenWrt 固件
 
