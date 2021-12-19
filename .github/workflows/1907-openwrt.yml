@@ -9,8 +9,6 @@
 name: Build 1907-OpenWrt
 
 on:
-  release:
-    types: [published]
   push:
     branches:
       - master
