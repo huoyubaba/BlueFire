@@ -28,9 +28,6 @@ on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
-      Tempoary_IP:
-        description: '临时修改 IP 地址 [可选]'
-        default: '10.1.10.1'
       ssh:
         description: 'SSH connection to Actions'
         required: false
