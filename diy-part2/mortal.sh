@@ -9,7 +9,7 @@
 #============================================================
 
 # Modify default IP
-# sed -i 's/192.168.1.1/10.1.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.1.10.1/g' package/base-files/files/bin/config_generate
 
 # Modify hostname
 sed -i 's/ImmortalWrt/R-Wrt/g' package/base-files/files/bin/config_generate
