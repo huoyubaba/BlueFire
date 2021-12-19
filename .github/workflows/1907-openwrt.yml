@@ -9,9 +9,14 @@
 name: Build 1907-OpenWrt
 
 on:
-  push:
-    branches:
-      - master
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+### 结束
 
 #  schedule:
 #    - cron: 0 8 * * 5
