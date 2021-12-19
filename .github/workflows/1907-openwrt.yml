@@ -25,7 +25,7 @@ env:
   REPO_URL: https://github.com/melsem/openwrt-19.07.7-spi
   REPO_BRANCH: master
   CONFIG_FILE: .config
-  DIY_SH: diy.sh
+  DIY_SH: Scripts/1907/diy.sh
   FREE_UP_DISK: false
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
