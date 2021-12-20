@@ -21,3 +21,4 @@ sed -i '$a src-git small https://github.com/Thanf-code/small-package' feeds.conf
 #git clone https://github.com/Thanf-code/luci-app-omcproxy.git package/luci-app-omcproxy
 git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 git clone https://github.com/Thanf-code/luci-app-cpufreq.git package/luci-app-cpufreq
+git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
