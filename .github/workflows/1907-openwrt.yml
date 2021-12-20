@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/liugengrong/openwrt.git
+  REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: openwrt-19.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: configs/1907-OpenWrt/1907.config
