@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build 2102-openwrt
+name: Build 1907-openwrt
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
