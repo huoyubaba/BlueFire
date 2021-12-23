@@ -15,7 +15,7 @@ env:
   REPO_BRANCH: openwrt-19.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: configs/1907-OpenWrt/1907.config
-  DIY_P1_SH: Scripts/1907/diy-part1/mortal.sh
+  DIY_P1_SH: Scripts/1907/diyscript.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
