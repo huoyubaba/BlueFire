@@ -17,16 +17,11 @@ env:
   CONFIG_FILE: configs/2102-OpenWrt/2102.config
   DIY_P1_SH: Scripts/2102/diy-part1/mortal.sh
   DIY_P2_SH: Scripts/2102/diy-part2/mortal.sh
-# 上传固件到 Github Releases
-  UPLOAD_RELEASES: true
-# 上传固件到 Github Artifacts
-  UPLOAD_ARTIFACTS: false
-# 上传 bin 文件夹到 Github Artifacts
-  UPLOAD_BIN_ARTIFACTS: false
-# 删除无用文件以增加编译空间
-  DELETE_USELESS_FILES: true
-# 删除早期的 workflow 任务
-  DELETE_OLD_WORKFLOW: true
+  UPLOAD_BIN_DIR: true
+  UPLOAD_FIRMWARE: true
+  UPLOAD_COWTRANSFER: true
+  UPLOAD_WETRANSFER: false
+  UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
 
 on:
@@ -125,49 +120,78 @@ jobs:
       if: (!cancelled())
       run: df -hT
 
-    - name: Upload Firmware to Artifacts
+    - name: Upload bin directory
       uses: actions/upload-artifact@main
-      if: env.UPLOAD_ARTIFACTS == 'true' && env.Result == 'true' && !cancelled()
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: ${{ env.CONFIG_FILE }}_firmware_${{ env.Compile_Date }}
-        path: openwrt/bin/Firmware
-
-    - name: Upload bin to Artifacts
-      uses: actions/upload-artifact@main
-      if: env.UPLOAD_BIN_ARTIFACTS == 'true' && env.Result == 'true' && !cancelled()
-      with:
-        name: ${{ env.CONFIG_FILE }}_bin_${{ env.Compile_Date }}
+        name: mortal_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt/bin
 
-    - name: Upload Firmware to Github Release
-      uses: svenstaro/upload-release-action@v2
-      if: env.UPLOAD_RELEASES == 'true' && env.Result == 'true' && !cancelled()
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: openwrt/bin/Firmware/*
-        file_glob: true
-        tag: AutoUpdate
-        overwrite: true
-        
-    - name: Download Github Release API
-      if: env.UPLOAD_RELEASES == 'true' && env.Result == 'true' && !cancelled()
+    - name: Organize files
+      id: organize
+      if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
-        wget https://api.github.com/repos/${{github.repository}}/releases/tags/AutoUpdate -O API
-        
-    - name: Upload API to Github Release
-      if: env.UPLOAD_RELEASES == 'true' && env.Result == 'true' && !cancelled()
-      uses: svenstaro/upload-release-action@v2
+        cd openwrt/bin/targets/*/*
+        rm -rf packages
+        echo "FIRMWARE=$PWD" >> $GITHUB_ENV
+        echo "::set-output name=status::success"
+    
+    - name: Upload firmware directory
+      uses: actions/upload-artifact@main
+      if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: ./API
-        file_glob: true
-        tag: AutoUpdate
-        overwrite: true
+        name: OpenWrt_mortal${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        path: ${{ env.FIRMWARE }}
 
-    - name: Delete old Workflow Runs
+    - name: Upload firmware to cowtransfer
+      id: cowtransfer
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
+      run: |
+        curl -fsSL git.io/file-transfer | sh
+        ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
+        echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
+        echo "::set-output name=url::$(cat cowtransfer.log | grep https | cut -f3 -d" ")"
+    
+    - name: Upload firmware to WeTransfer
+      id: wetransfer
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
+      run: |
+        curl -fsSL git.io/file-transfer | sh
+        ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
+        echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
+        echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
+    
+    - name: Generate release tag
+      id: tag
+      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+      run: |
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
+        touch release.txt
+        [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
+        [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
+        echo "::set-output name=status::success"
+    
+    - name: Upload firmware to release
+      uses: softprops/action-gh-release@v1
+      if: steps.tag.outputs.status == 'success' && !cancelled()
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.tag.outputs.release_tag }}
+        body_path: release.txt
+        files: ${{ env.FIRMWARE }}/*
+
+    - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
-      if: env.DELETE_OLD_WORKFLOW == 'true' && !cancelled()
       with:
         retain_days: 1
         keep_minimum_runs: 3
 
+    - name: Remove old Releases
+      uses: dev-drprasad/delete-older-releases@v0.1.0
+      #if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+      with:
+        keep_latest: 3
+        delete_tags: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
