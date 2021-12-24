@@ -11,7 +11,7 @@
 name: Build 2102-openwrt
 
 env:
-  REPO_URL: https://github.com/Thanf-code/immortalwrt
+  REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: 21.02
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: configs/2102-OpenWrt/2102.config
