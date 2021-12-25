@@ -23,3 +23,4 @@ git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netd
 git clone https://github.com/Thanf-code/luci-app-cpufreq.git package/luci-app-cpufreq
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/luci-app-autotimeset
+git clone https://github.com/animefansxj/luci-app-smartinfo.git package/luci-app-smartinfo
