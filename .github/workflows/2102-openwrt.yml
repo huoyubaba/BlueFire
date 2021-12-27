@@ -12,7 +12,7 @@ name: Build 2102-openwrt
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-18.06-k5.4
+  REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: configs/2102-OpenWrt/2102.config
   DIY_P1_SH: Scripts/2102/diy-part1/mortal.sh
