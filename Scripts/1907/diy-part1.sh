@@ -18,7 +18,7 @@
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
-git clone https://github.com/Thanf-code/luci-app-cpufreq.git package/luci-app-cpufreq
+# git clone https://github.com/Thanf-code/luci-app-cpufreq.git package/luci-app-cpufreq
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo.git package/luci-app-smartinfo
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
