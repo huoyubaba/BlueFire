@@ -22,3 +22,4 @@ git clone https://github.com/Thanf-code/luci-app-cpufreq.git package/luci-app-cp
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo.git package/luci-app-smartinfo
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
+git clone https://github.com/zlg98/luci-app-vlmcsd.git package/luci-app-vlmcsd
