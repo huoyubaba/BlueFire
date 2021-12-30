@@ -16,7 +16,7 @@
 # Add a feed source
 # sed -i '$a src-git lede https://github.com/coolsnowwolf/lede/tree/master/package' feeds.conf.default
 # sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-# sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+# sed -i '$a src-git kenzo https://github.com/kenzok8/jell.git' feeds.conf.default
 # git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 # git clone https://github.com/Thanf-code/luci-app-cpufreq.git package/luci-app-cpufreq
 git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
