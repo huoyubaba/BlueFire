@@ -7,7 +7,7 @@
 #
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part3.sh
-# Description: OpenWrt DIY script part 1 (Before Update feeds)
+# Description: OpenWrt DIY script part 3 (Before Update feeds)
 #
 
 # Uncomment a feed source
