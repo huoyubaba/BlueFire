@@ -20,7 +20,7 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/jell' feeds.conf.default   #
 # git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 # git clone https://github.com/Thanf-code/luci-app-cpufreq.git package/luci-app-cpufreq
 # git clone https://github.com/kenzok8/jell package
-git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
+# git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
 # git clone https://github.com/iamaluckyguy/luci-app-smartinfo.git package/luci-app-smartinfo
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 git clone https://github.com/zlg98/luci-app-vlmcsd.git package/luci-app-vlmcsd
