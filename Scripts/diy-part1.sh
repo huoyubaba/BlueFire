@@ -23,5 +23,5 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/small-package' feeds.conf.de
 git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
 # git clone https://github.com/iamaluckyguy/luci-app-smartinfo.git package/luci-app-smartinfo
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
-git clone https://github.com/zlg98/luci-app-vlmcsd.git package/luci-app-vlmcsd
+# git clone https://github.com/zlg98/luci-app-vlmcsd.git package/luci-app-vlmcsd
 git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
