@@ -25,3 +25,4 @@ git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpb
 git clone https://github.com/xsmzhzy/luci-app-vlmcsd.git package/luci-app-vlmcsd
 git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
 git clone https://github.com/fshh1988/luci-app-nfs.git package/luci-app-nfs
+git clone https://github.com/deplives/luci-app-samba.git package/luci-app-samba
