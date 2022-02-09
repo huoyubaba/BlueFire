@@ -24,3 +24,4 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/small-package' feeds.conf.de
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 git clone https://github.com/xsmzhzy/luci-app-vlmcsd.git package/luci-app-vlmcsd
 git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
+git clone https://github.com/fshh1988/luci-app-nfs.git package/luci-app-nfs
