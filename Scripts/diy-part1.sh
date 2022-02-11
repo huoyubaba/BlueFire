@@ -23,7 +23,7 @@ git clone https://github.com/pymumu/smartdns.git package/smartdns
 git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns  #smartdns DNS加速
 # git clone https://github.com/iamaluckyguy/luci-app-smartinfo.git package/luci-app-smartinfo
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
-git clone https://github.com/xsmzhzy/luci-app-vlmcsd.git package/luci-app-vlmcsd
+# git clone https://github.com/xsmzhzy/luci-app-vlmcsd.git package/luci-app-vlmcsd
 git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
-git clone https://github.com/fshh1988/luci-app-nfs.git package/luci-app-nfs
-git clone https://github.com/deplives/luci-app-samba.git package/luci-app-samba
+# git clone https://github.com/fshh1988/luci-app-nfs.git package/luci-app-nfs
+# git clone https://github.com/deplives/luci-app-samba.git package/luci-app-samba
