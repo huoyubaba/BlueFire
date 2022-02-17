@@ -138,7 +138,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}"
+        echo "::set-output name=release_tag::OpenWrt_${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}"
         touch release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
@@ -152,7 +152,7 @@ jobs:
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
-        files: ${{ env.FIRMWARE }}${{ env.FILE_DATE }}/*
+        files: ${{ env.FIRMWARE }}/*
 
     - name: 删除工作流运行
       uses: GitRML/delete-workflow-runs@main
