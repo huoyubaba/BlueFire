@@ -144,15 +144,16 @@ jobs:
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
 
-    - name: 上传固件以发布
+    - name: 上传固件发布
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       with:
-        tag_name: ${{ steps.tag.outputs.release_tag }}
+        files: "${{ env.FIRMWARE }}/*"
+        name: ${{ env.date2 }} ${{matrix.target}}
+        tag_name: ${{ env.date }}_${{matrix.target}}
         body_path: release.txt
-        files: ${{ env.FIRMWARE }}/*
 
     - name: 删除工作流运行
       uses: GitRML/delete-workflow-runs@main
