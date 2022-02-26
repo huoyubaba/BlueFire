@@ -56,7 +56,7 @@ jobs:
       id: date
       run: |
         echo "date=$(date +'%Y.%m.%d-%H%M')" >> $GITHUB_ENV
-        echo "date2=$(date +'%m/%d %Y')" >> $GITHUB_ENV
+        echo "date2=$(date +'%Y.%m/%d')" >> $GITHUB_ENV
         echo "date3=$(date +'%m.%d')" >> $GITHUB_ENV
         echo "date4=$(date +'%m.%d.%H')" >> $GITHUB_ENV
         echo "DOCKERTAG=${{ secrets.DOCKER_ID }}/openwrt-6p:latest" >> $GITHUB_ENV
@@ -149,7 +149,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::${{ env.CONFIG_FILE }}_bin_${{ env.FILE_DATE }}"
+        echo "::set-output name=release_tag::${{ env.CONFIG_FILE }}_bin_${{ env.DATE }}"
         touch release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
@@ -163,7 +163,8 @@ jobs:
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
-        files: ${{ env.FIRMWARE }}_${{ env.FILE_DATE }}/*
+        files: "${{ env.FIRMWARE }}/*"
+        name: ${{ env.date4 }}.${{ env.CONFIG_FILE }}      
 
     - name: 删除工作流运行
       uses: GitRML/delete-workflow-runs@main
