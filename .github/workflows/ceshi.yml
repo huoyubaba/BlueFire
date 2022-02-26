@@ -80,7 +80,7 @@ jobs:
     - name: 自定义安装源
       working-directory: ./openwrt
       run: |
-        git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages 
+        git clone https://github.com/kenzok8/openwrt-packages package/jeii
         
     - name: 自定义配置${{matrix.target}}
       env:
