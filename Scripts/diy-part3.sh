@@ -16,7 +16,7 @@
 # Add a feed source
 # sed -i '$a src-git lede https://github.com/coolsnowwolf/lede/tree/master/package' feeds.conf.default
 # sed -i '$a src-git kenzo https://github.com/kenzok8/jell' feeds.conf.default   #19.07 18.06 软件源
-sed -i '$a src-git kenzo https://github.com/kenzok8/small-package' feeds.conf.default   # 软件源
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default   # 软件源
 # git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 # git clone https://github.com/Thanf-code/luci-app-cpufreq.git package/luci-app-cpufreq
 # git clone https://github.com/kenzok8/jell package
