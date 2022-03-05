@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build 2102 OpenWrt
+name: Build 21.02 OpenWrt
 
 on:
   repository_dispatch:
