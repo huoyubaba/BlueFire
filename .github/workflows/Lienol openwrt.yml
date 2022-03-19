@@ -24,7 +24,7 @@ env:
   REPO_BRANCH: 19.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: newifi-d2@openwrt.config
-  DIY_P1_SH: Scripts/diy-part3.sh
+  DIY_P1_SH: Scripts/diy-part1.sh
   DIY_P2_SH: Scripts/diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
