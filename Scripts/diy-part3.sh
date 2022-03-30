@@ -32,3 +32,4 @@ svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci
 # svn co https://github.com/kenzok8/jell/trunk/luci-app-samba4 package/luci-app-samba4
 svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
 # svn co https://github.com/kenzok8/jell/trunk/luci-app-vsftpd package/luci-app-vsftpd
+svn co https://github.com/kenzok8/jell/trunk/luci-app-vlmcsd package/luci-app-vlmcsd
