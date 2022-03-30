@@ -28,3 +28,7 @@ svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable package/luci-app-usb3disable
+svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci-app-accesscontrol
+svn co https://github.com/kenzok8/jell/trunk/luci-app-samba4 package/luci-app-samba4
+svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
+svn co https://github.com/kenzok8/jell/trunk/luci-app-vsftpd package/luci-app-vsftpd
