@@ -25,3 +25,4 @@ git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpb
 git clone https://github.com/zlg98/luci-app-vlmcsd.git package/luci-app-vlmcsd
 git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
