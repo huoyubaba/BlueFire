@@ -27,3 +27,4 @@ git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable package/luci-app-usb3disable
