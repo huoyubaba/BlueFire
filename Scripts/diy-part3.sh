@@ -34,6 +34,8 @@ svn co https://github.com/kenzok8/jell/trunk/luci-app-samba4 package/luci-app-sa
 svn co https://github.com/kenzok8/jell/trunk/autoshare-samba package/autoshare-samba
 svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
 svn co https://github.com/kenzok8/jell/trunk/luci-app-vsftpd package/luci-app-vsftpd
+svn co https://github.com/kenzok8/jell/trunk/vsftpd-alt package/vsftpd-alt
 svn co https://github.com/kenzok8/jell/trunk/luci-app-vlmcsd package/luci-app-vlmcsd
+svn co https://github.com/kenzok8/jell/trunk/vlmcsd package/vlmcsd
 
 
