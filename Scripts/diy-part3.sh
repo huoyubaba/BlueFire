@@ -23,8 +23,8 @@
 # git clone https://github.com/iamaluckyguy/luci-app-smartinfo.git package/luci-app-smartinfo
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 # git clone https://github.com/zlg98/luci-app-vlmcsd.git package/luci-app-vlmcsd
-# git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
-svn co https://github.com/huoyubaba/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
+git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
+# svn co https://github.com/huoyubaba/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
 # git clone https://github.com/kongfl888/luci-i18n-sqm-zh-cn.git package/luci-i18n-sqm-zh-cn
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns
