@@ -37,6 +37,7 @@ svn co https://github.com/kenzok8/jell/trunk/luci-app-vlmcsd package/luci-app-vl
 svn co https://github.com/kenzok8/jell/trunk/vlmcsd package/vlmcsd
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-app-oaf
 svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter
+svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf
 
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree
