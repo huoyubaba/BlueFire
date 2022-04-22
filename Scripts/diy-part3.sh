@@ -24,20 +24,24 @@
 # git clone https://github.com/zlg98/luci-app-vlmcsd.git package/luci-app-vlmcsd
 # svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
+
+git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
+git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/kenzok8/small-package/trunk/smartdns package/smartdns
-svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
-svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree
-svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable package/luci-app-usb3disable
-svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci-app-accesscontrol
 svn co https://github.com/kenzok8/jell/trunk/luci-app-samba4 package/luci-app-samba4
 svn co https://github.com/kenzok8/jell/trunk/autoshare-samba package/autoshare-samba
-svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
 svn co https://github.com/kenzok8/jell/trunk/luci-app-vsftpd package/luci-app-vsftpd
 svn co https://github.com/kenzok8/jell/trunk/vsftpd-alt package/vsftpd-alt
 svn co https://github.com/kenzok8/jell/trunk/luci-app-vlmcsd package/luci-app-vlmcsd
 svn co https://github.com/kenzok8/jell/trunk/vlmcsd package/vlmcsd
-git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
-git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-app-oaf
+svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter
+
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable package/luci-app-usb3disable
+svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci-app-accesscontrol
+svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
 svn co https://github.com/kenzok8/jell/trunk/ipv6-helper package/ipv6-helper
 
