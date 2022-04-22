@@ -23,7 +23,6 @@
 # git clone https://github.com/iamaluckyguy/luci-app-smartinfo.git package/luci-app-smartinfo
 # git clone https://github.com/zlg98/luci-app-vlmcsd.git package/luci-app-vlmcsd
 # svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
-git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 
 git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
 git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
@@ -38,6 +37,8 @@ svn co https://github.com/kenzok8/jell/trunk/vlmcsd package/vlmcsd
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-app-oaf
 svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter
 svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf
+
+git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree
