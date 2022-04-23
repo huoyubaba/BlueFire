@@ -37,9 +37,11 @@ svn co https://github.com/kenzok8/jell/trunk/vlmcsd package/vlmcsd
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-app-oaf
 svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter
 svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf
-
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-nfs package/luci-app-nfs
-svn co https://github.com/kiddin9/openwrt-packages/trunk/dnsmasq package/dnsmasq
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-nfs package/luci-app-nfs
+
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-firewall package/luci-app-firewall
+svn co https://github.com/kiddin9/openwrt-packages/trunk/firewall package/firewall
 
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 
