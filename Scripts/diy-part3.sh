@@ -38,10 +38,6 @@ svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-
 svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter
 svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-nfs package/luci-app-nfs
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-nfs package/luci-app-nfs
-
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-firewall package/luci-app-firewall
-svn co https://github.com/kiddin9/openwrt-packages/trunk/firewall package/firewall
 
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 
@@ -50,5 +46,6 @@ svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/l
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable package/luci-app-usb3disable
 svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci-app-accesscontrol
 svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
-svn co https://github.com/kenzok8/jell/trunk/ipv6-helper package/ipv6-helper
 
+svn co https://github.com/kenzok8/jell/trunk/ipv6-helper package/ipv6-helper
+svn co https://github.com/kiddin9/openwrt-packages/trunk/dnsmasq package/dnsmasq
