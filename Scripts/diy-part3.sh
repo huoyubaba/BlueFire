@@ -48,5 +48,5 @@ svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable packa
 svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci-app-accesscontrol
 svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
 
-svn co https://github.com/kenzok8/jell/trunk/ipv6-helper package/ipv6-helper
+# svn co https://github.com/kenzok8/jell/trunk/ipv6-helper package/ipv6-helper
 
