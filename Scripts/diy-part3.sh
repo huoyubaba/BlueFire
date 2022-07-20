@@ -40,6 +40,8 @@ svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-nfs package/luci-app-nfs
 svn co https://github.com/huoyubaba/mi-packages/trunk/luci-app-easymesh package/luci-app-easymesh
 
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-mosdns package/luci-app-mosdns
+
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
