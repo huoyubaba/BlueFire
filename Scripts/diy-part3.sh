@@ -40,7 +40,7 @@ svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-nfs package/luci-app-nfs
 svn co https://github.com/huoyubaba/mi-packages/trunk/luci-app-easymesh package/luci-app-easymesh
 
-svn co https://github.com/kenzok8/small-package/trunk/luci-app-mosdns package/luci-app-mosdns
+
 
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 
@@ -51,4 +51,4 @@ svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci
 svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
 
 # svn co https://github.com/kenzok8/jell/trunk/ipv6-helper package/ipv6-helper
-
+# svn co https://github.com/kenzok8/small-package/trunk/luci-app-mosdns package/luci-app-mosdns
