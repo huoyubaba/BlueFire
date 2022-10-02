@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: 20200416
+  REPO_BRANCH: 20221001
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: newifi-d2/lede.config
   DIY_P1_SH: Scripts/diy-part1.sh
