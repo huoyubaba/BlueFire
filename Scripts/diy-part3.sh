@@ -29,7 +29,7 @@ git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/kenzok8/small-package/trunk/smartdns package/smartdns
 svn co https://github.com/kenzok8/jell/trunk/luci-app-samba4 package/luci-app-samba4
-svn co https://github.com/kenzok8/jell/trunk/autoshare-samba package/autoshare-samba
+svn co https://github.com/kenzok8/jell/small-package/autoshare-samba package/autoshare-samba
 svn co https://github.com/kenzok8/jell/trunk/luci-app-vsftpd package/luci-app-vsftpd
 svn co https://github.com/kenzok8/jell/trunk/vsftpd-alt package/vsftpd-alt
 svn co https://github.com/kenzok8/jell/trunk/luci-app-vlmcsd package/luci-app-vlmcsd
@@ -38,7 +38,7 @@ svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-
 svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter
 svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-nfs package/luci-app-nfs
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-easymesh package/luci-app-easymesh
+svn co https://github.com/kenzok8/jell/small-package/trunk/luci-app-easymesh package/luci-app-easymesh
 
 
 
