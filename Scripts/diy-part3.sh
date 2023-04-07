@@ -28,22 +28,22 @@ git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
 git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/kenzok8/small-package/trunk/smartdns package/smartdns
+
+svn co https://github.com/deplives/luci-app-samba package//luci-app-samba
 svn co https://github.com/kenzok8/jell/trunk/luci-app-samba4 package/luci-app-samba4
 svn co https://github.com/kenzok8/small-package/trunk/autoshare-samba package/autoshare-samba
 svn co https://github.com/kenzok8/jell/trunk/luci-app-vsftpd package/luci-app-vsftpd
 svn co https://github.com/kenzok8/jell/trunk/vsftpd-alt package/vsftpd-alt
+
 svn co https://github.com/kenzok8/jell/trunk/luci-app-vlmcsd package/luci-app-vlmcsd
 svn co https://github.com/kenzok8/jell/trunk/vlmcsd package/vlmcsd
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-app-oaf
 svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter
 svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-nfs package/luci-app-nfs
+
 svn co https://github.com/kenzok8/jell/small-package/trunk/luci-app-easymesh package/luci-app-easymesh
 
-
-
 git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
-
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable package/luci-app-usb3disable
@@ -52,5 +52,5 @@ svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-a
 svn co https://github.com/kenzok8/jell/trunk/luci-app-passwall package/luci-app-passwall
 
 # svn co https://github.com/kenzok8/jell/trunk/ipv6-helper package/ipv6-helper
-svn co https://github.com/kenzok8/small-package/trunk/luci-app-mosdns package/luci-app-mosdns
-svn co https://github.com/kenzok8/small-package/trunk/mosdns package/mosdns
+# svn co https://github.com/kenzok8/small-package/trunk/luci-app-mosdns package/luci-app-mosdns
+# svn co https://github.com/kenzok8/small-package/trunk/mosdns package/mosdns
