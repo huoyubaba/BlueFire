@@ -49,6 +49,7 @@ svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/l
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable package/luci-app-usb3disable
 svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci-app-accesscontrol
 svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
+svn co https://github.com/kenzok8/jell/trunk/luci-app-passwall package/luci-app-passwall
 
 # svn co https://github.com/kenzok8/jell/trunk/ipv6-helper package/ipv6-helper
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-mosdns package/luci-app-mosdns
